@@ -2,17 +2,72 @@
 
 $primary-color:#0D7CA0;
 $secondary-color:#0E1232;
-
 $primary-text-color:#2A2525;
 $secondary-text-color:#5F6171;
-
 $gradient-color:#0313A7;
+$error-gradient-dark:#FE9EB5;
+$error-gradient-light:#E7CFCF;
 
 //MOBILE TEXT STYLES
 
-$m-Page-header-fs:1.5rem;
-$m-section-header-fs:.75rem;
-$m-Sub-header-fs:.8125rem;
-$m-body-fs:.8125rem;
-$m-label-fs:.625rem;
-$m-button-fs:.625rem;
+$m-logo-fs:1.125rem;
+$m-nav-link-fs:1rem;
+$m-hero-subheading-fs:1.375rem;
+$m-hero-main-heading-fs:2rem;
+$m-section-heading:2rem;
+$m-section-subheading:2rem;
+$m-carousel-fs:.875rem;
+$m-body-fs:.875rem;
+$m-label-fs:.875rem;
+$m-in-development-fs:1rem;
+$m-button-fs:.875rem;
+$m-footer-heading-fs:1.375rem;
+$m-footer-link-fs:1rem;
+
+$m-carousel-lh:1.625rem;
+$m-body-lh:1.625rem;
+
+//TABLET TEXT STYLES
+$t-logo-fs:1.5rem;
+$t-nav-link-fs:1.25rem;
+$t-hero-subheading-fs:1.75rem;
+$t-hero-main-heading-fs:2.8125rem;
+$t-button-fs:1.375rem;
+$t-section-heading:2.8125rem;
+$t-section-subheading:1.75rem;
+$t-carousel-fs:1.125rem;
+$t-body-fs:1.125rem;
+$t-label-fs:1.125rem;
+$t-in-development-fs:1.25rem;
+$t-footer-heading-fs:1.875rem;
+$t-footer-link-fs:1.25rem;
+
+
+$t-carousel-lh:2rem;
+$t-body-lh:2rem;
+
+
+
+//DESKTOP TEXT STYLES
+
+$d-logo-fs:1.75rem;
+$d-nav-link-fs:1.5rem;
+$d-hero-subheading-fs:2.5rem;
+$d-hero-main-heading-fs:3.75rem;
+$d-button-fs:1.75rem;
+$d-section-heading:3.75rem;
+$d-section-subheading:2.5rem;
+$d-carousel-fs:1.375rem;
+$d-body-fs:1.375rem;
+$d-label-fs:1.375rem;
+$d-in-development-fs:1.5rem;
+$d-footer-heading-fs:2.5rem;
+$d-footer-link-fs:1.875rem;
+
+
+$d-carousel-lh:2.5rem;
+$d-body-lh:2.5rem;
+
+//DESKTOP MAX WIDTH
+
+$desktop-max-width:63.75rem;
