@@ -6,6 +6,7 @@
     background-image: linear-gradient(to bottom right,$gradient-color,$primary-color,$gradient-color);
     padding: $small-spacing;
     color:white;
+
     @include tablet{
         padding: $medium-spacing;
     }
@@ -13,8 +14,56 @@
         padding: $large-spacing;
         max-width: $desktop-max-width;
     }
+
+    //CONTAINERS
+
+    &__content-container{
+        display:flex;
+        flex-direction: column;
+    }
+
+    &__button-container{
+        display:flex;
+        flex-direction: column;
+    }
+
+    //HEADER ELEMENTS
+
+    &__title{
+        @include styleText($m-hero-subheading-fs,400);
+       
+
+        &--name{
+            display: block;
+            @include styleText($m-hero-main-heading-fs,700);
+            margin:$extra-small-spacing auto;
+        }
+    }
+
+    &__profile-picture{
+        height:14.5rem;
+        align-self: flex-end;
+        margin-top: -$small-spacing;
+        margin-right: -$small-spacing;
+
+    }
+
+    
+
 }
 
 .logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: $extra-large-spacing;
 
+    &__icon{
+        height:2.2rem;
+        margin-right: $small-spacing;
+    }
+
+    &__text{
+        font-size: $m-logo-fs;
+    }
+    
 }
