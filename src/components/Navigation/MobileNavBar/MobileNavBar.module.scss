@@ -24,7 +24,11 @@
     &__link{
         text-decoration: none;
         color: white;
-        @include styleText($m-nav-link-fs,400)
+        @include styleText($m-nav-link-fs,400);
+        transition: border-bottom .1s ease-out;
+        &:hover{
+            border-bottom: 2px solid white;
+        }
     }
     &__close-icon{
         height:2.5rem;

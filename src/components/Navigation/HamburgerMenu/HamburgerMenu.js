@@ -11,15 +11,15 @@ const HamburgerMenu = () => {
         setShowMobileNav(true);
     }
 
-    function closeMenuHandler(event) {
+    const  closeMenuHandler = (event) => {
         event.preventDefault();
         setShowMobileNav(false);
     }
 
     return (
         <>
-        <div className={classes['menu-container']} onClick={openMenuHandler}>
-            <img src={hamburgerIcon} alt="hamburger icon" className={classes['menu__icon']} />
+        <div className={classes[`menu-container${showMobileNav ? '--hidden' : ''}`]} onClick={openMenuHandler}>
+            <img src={hamburgerIcon} alt="hamburger icon" className={classes[`menu__icon`]} />
         </div>
         {showMobileNav && <MobileNavBar closeMenuHandler={closeMenuHandler}/>}
 
