@@ -1,0 +1,32 @@
+@use '../../../styles//partials/mixins' as *;
+@use '../../../styles//partials/variables' as *;
+
+.nav{
+    position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    z-index:3;
+    height:4rem;
+    background-color: $secondary-color;
+    padding: $small-spacing;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__links{
+        display: flex;
+        gap:$medium-spacing;
+        list-style: none;
+        text-decoration: none;
+    }
+    &__link{
+        text-decoration: none;
+        color: white;
+        @include styleText($m-nav-link-fs,400)
+    }
+    &__close-icon{
+        height:2.5rem;
+    }
+}

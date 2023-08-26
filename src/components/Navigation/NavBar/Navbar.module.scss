@@ -1,0 +1,24 @@
+@use '../../../styles//partials/mixins' as *;
+@use '../../../styles//partials/variables' as *;
+
+.nav{
+    position: relative;
+    &__links{
+        display:none;
+    }
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding: $small-spacing;
+
+    &__icon{
+        height:2.2rem;
+        margin-right: $small-spacing;
+    }
+
+    &__text{
+        font-size: $m-logo-fs;
+    }
+    
+}

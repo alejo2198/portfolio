@@ -1,0 +1,29 @@
+@use '../../../styles//partials/mixins' as *;
+@use '../../../styles//partials/variables' as *;
+
+.menu{
+    
+    &__icon{
+        height: 2.5rem;
+        margin-bottom: 1.5rem;
+        margin-left: 1.3rem;
+        transition: all .2s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    
+}
+.menu-container{
+    display: flex;
+    align-items: flex-end;
+    background-color: $secondary-color;
+    position: absolute;
+    height: 8rem;
+    width:8rem;
+    border-radius: 50%;
+    top:0;
+    right:0;
+    transform: translate(40%,-40%);
+    
+}
