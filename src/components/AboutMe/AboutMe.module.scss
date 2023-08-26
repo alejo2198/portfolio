@@ -1,0 +1,16 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.about-section{
+    &__title{
+        color:$primary-color;
+        @include styleText($m-section-heading-fs,700);
+        margin:$small-spacing 0;
+    }
+    &__text{
+        color:$primary-text-color;
+        @include styleText($m-body-fs,400);
+        line-height: $m-body-lh;
+        margin:$small-spacing 0;
+    }
+}
