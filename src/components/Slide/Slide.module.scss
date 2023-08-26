@@ -1,0 +1,34 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets//design/slider-graphic.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    
+    &__title{
+        position: relative;
+        top:1rem;
+        left:3rem;
+        color:white;
+        align-self: flex-start;
+        @include styleText($m-section-subheading-fs,700);
+        margin-bottom: $small-spacing;
+    }
+    &__graphic{
+        height:10rem;
+        position: relative;
+        z-index: -1;
+    }
+    &__text{
+        padding:0 $small-spacing;
+        color:$primary-text-color;
+        @include styleText($m-carousel-fs,400);
+        line-height:$m-carousel-lh;
+        text-align: center;
+        margin-bottom: $small-spacing;
+    }
+}
