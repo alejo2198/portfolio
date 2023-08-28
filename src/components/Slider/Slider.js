@@ -1,6 +1,10 @@
 import { useRef, useEffect } from 'react';
 import { register } from 'swiper/element/bundle';
 import Slide from '../Slide/Slide';
+
+import navigationRight from '../../assets/icons/navigation-right.svg'
+import navigationLeft from '../../assets/icons/navigation-left.svg'
+
 register();
 
 const slides = [
@@ -27,27 +31,60 @@ const slides = [
 ]
 
 const Slider = () => {
-    const swiperElRef = useRef(null);
+    const swiperRef = useRef(null);
 
     useEffect(() => {
-        // listen for Swiper events using addEventListener
-        swiperElRef.current.addEventListener('progress', (e) => {
-        const [swiper, progress] = e.detail;
-        console.log(progress);
-        });
+        const swiperContainer = swiperRef.current;
+        const params = {
+            navigation: true,
+            pagination: true,
+            injectStyles: [
+                `
+               
+                .swiper-button-next,
+                .swiper-button-prev {
+                    
+                    height:1.5rem;
+                    
+                }
 
-        swiperElRef.current.addEventListener('slidechange', (e) => {
-        console.log('slide changed');
-        });
+                .swiper-button-prev {
+                    background-image: url(${navigationLeft});
+                    background-repeat:no-repeat;
+                    background-position:left;
+                  }
+        
+                  .swiper-button-next {
+                    background-image: url(${navigationRight});
+                    background-repeat:no-repeat;
+                    background-position:right;
+
+                  }
+
+                .swiper-button-next svg,
+                .swiper-button-prev svg{
+                    display:none
+                }
+                
+                .swiper-pagination-bullet{
+                    height:.75rem;
+                    width:.75rem;
+                    background-color: #0D7Ca0;
+                }
+            `,
+            ]
+        };
+    
+        Object.assign(swiperContainer, params);
+        swiperContainer.initialize();
     }, []);
 
     return (
         <swiper-container
-            ref={swiperElRef}
+            ref={swiperRef}
             slides-per-view="1"
-            navigation="true"
-            pagination={{clickable: true,}}
             centeredSlides={true}
+            init='false'
             >
             {slides.map((slide,index)=>{
                 return <swiper-slide key={index} ><Slide slide={slide}/></swiper-slide>

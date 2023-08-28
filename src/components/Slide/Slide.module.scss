@@ -7,7 +7,7 @@
     align-items: center;
     background-image: url('../../assets//design/slider-graphic.png');
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 11rem;
     
     &__title{
         position: relative;
@@ -16,12 +16,13 @@
         color:white;
         align-self: flex-start;
         @include styleText($m-section-subheading-fs,700);
-        margin-bottom: $small-spacing;
+        margin-bottom: $large-spacing;
     }
     &__graphic{
-        height:10rem;
+        height:9rem;
         position: relative;
         z-index: -1;
+        margin-bottom: $small-spacing;
     }
     &__text{
         padding:0 $small-spacing;
@@ -29,6 +30,6 @@
         @include styleText($m-carousel-fs,400);
         line-height:$m-carousel-lh;
         text-align: center;
-        margin-bottom: $small-spacing;
+        margin-bottom: $large-spacing;
     }
 }
