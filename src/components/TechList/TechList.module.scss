@@ -1,0 +1,24 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.tech-list{
+    display: flex;
+    align-items: center;
+    list-style-type:none;
+    animation: 20s slide infinite linear;
+
+    &__section{
+        background-color: $secondary-color;
+        overflow: hidden;
+        display: flex;
+    }
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    from{
+        transform: translateX(-100%);
+    }
+}

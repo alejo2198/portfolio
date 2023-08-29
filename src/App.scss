@@ -14,12 +14,5 @@ body{
 }
 
 .main{
-    padding: $small-spacing;
-    @include tablet{
-        padding: $medium-spacing;
-    }
-    @include desktop{
-        padding: $large-spacing;
-        max-width: $desktop-max-width;
-    }
+  
 }

@@ -1,0 +1,20 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.tech-item{
+    color: white;
+    padding: $medium-spacing;
+    text-align: center;
+  
+    &__img{
+        width:3rem;
+        margin-bottom: $small-spacing;
+        
+    }
+
+
+    &__text{
+        @include styleText($m-body-fs,400);
+    }
+   
+}
