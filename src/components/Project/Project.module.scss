@@ -1,0 +1,64 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.project{
+    &__title-container{
+        display:flex;
+        justify-content: space-between;
+        align-items: baseline;
+        
+    }
+    &__title{
+        @include styleText($m-section-subheading-fs,700);
+        color:$secondary-color;
+        margin-bottom: $small-spacing;
+    }
+    &__in-development{
+        @include styleText($m-in-development-fs,700);
+        color:$secondary-text-color
+    }
+    &__description{
+        @include styleText($m-body-fs,400);
+        color:$primary-text-color;
+        line-height: $m-body-lh;
+        margin-bottom: $small-spacing;
+    }
+    &__image-container{
+        width:16rem;
+        height:25rem;
+        background-color: #D9D9D9;
+        margin: 0 auto;
+        margin-bottom: $small-spacing;
+        
+    }
+    &__features{
+        
+    }
+    &__features-container{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: .5rem;
+
+    }
+    &__feature{
+        flex-basis:50%;
+        margin-bottom: .5rem;
+        
+    }
+    &__tech-stack{
+        
+    }
+    &__tech-stack-container{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width:12rem;
+        margin: $small-spacing auto;
+    }
+    &__tech-item{
+        margin-bottom: 1rem;
+       
+    }
+}

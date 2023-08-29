@@ -1,0 +1,18 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+.project-section{
+    padding: $small-spacing;
+    @include tablet{
+        padding: $medium-spacing;
+    }
+    @include desktop{
+        padding: $large-spacing;
+        max-width: $desktop-max-width;
+    }
+    &__title{
+        color:$primary-color;
+        @include styleText($m-section-heading-fs,700);
+        margin:$small-spacing 0;
+    }
+    
+}

@@ -2,6 +2,7 @@ import './App.scss'
 import Header from './components/Header/Header';
 import AboutMe from './components/AboutMe/AboutMe';
 import TechList from './components/TechList/TechList';
+import ProjectList from './components/ProjectList/ProjectList';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main className="main">
         <AboutMe/>
         <TechList/>
+        <ProjectList/>
       </main>
     </div>
     

@@ -38,6 +38,7 @@ const Slider = () => {
         const params = {
             navigation: true,
             pagination: true,
+            loop:true,
             injectStyles: [
                 `
                

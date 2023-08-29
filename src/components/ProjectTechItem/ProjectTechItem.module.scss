@@ -1,0 +1,16 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.tech-item{
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .2rem solid $primary-color;
+    padding: .5rem;
+    &__img{
+        width:2rem;
+        height: 2rem;
+        filter: brightness(0) saturate(100%) invert(40%) sepia(53%) saturate(876%) hue-rotate(151deg) brightness(88%) contrast(93%);
+    }
+}
