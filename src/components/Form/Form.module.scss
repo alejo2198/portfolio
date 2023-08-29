@@ -1,0 +1,88 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.form-section{
+    padding: $small-spacing;
+    position: relative;
+    @include tablet{
+        padding: $medium-spacing;
+    }
+    @include desktop{
+        padding: $large-spacing;
+        max-width: $desktop-max-width;
+    }
+}
+
+.form{
+    width:16rem;
+    margin: 0 auto;
+    padding: $medium-spacing 1.25rem ;
+    border-radius:2rem;
+    border: 3px solid $primary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 1rem 1rem $primary-color,0px 3px 5px rgba(0,0,0,0.2);
+    background-color: white;
+
+    &__label{
+        @include styleText($m-body-fs,400);
+        margin-bottom: .2rem;
+    }
+
+    &__input{
+        border-radius:.625rem;
+        box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+        height:2rem;
+        width: 85%;
+        background-image: linear-gradient(to bottom, $input-gradient-dark,$input-gradient-light);
+        border:none;
+        margin-bottom: $small-spacing;
+        &--error{
+            @extend .form__input;
+            background-image: linear-gradient(to bottom, $error-gradient-dark,$error-gradient-light);
+        }
+    }
+
+    &__textarea{
+        @extend .form__input;
+        height:6rem;
+        resize: none;
+    }
+    &__img{
+        height:12rem;
+        position:absolute;
+        z-index: -2;
+        right:0;
+        top:11rem;
+    }
+
+    &__title{
+        color:$primary-color;
+        @include styleText($m-section-heading-fs,700);
+        margin-bottom:$small-spacing;
+    }
+    &__text{
+        color:$primary-text-color;
+        @include styleText($m-label-fs,400);
+        line-height: $m-body-lh;
+        margin:$small-spacing 0;
+        margin-bottom: 8rem;
+    }
+    &__button{
+        align-self: flex-end;
+        @include styleText(1rem,400);
+        color: white;
+        padding: .5rem $medium-spacing;
+        background-color: $primary-color;
+        box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+        border-radius: .625rem;
+        border: 3px solid $input-gradient-dark;
+       
+    }
+
+
+}
+
+
+
