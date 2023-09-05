@@ -4,6 +4,7 @@ import AboutMe from './components/AboutMe/AboutMe';
 import TechList from './components/TechList/TechList';
 import ProjectList from './components/ProjectList/ProjectList';
 import Form from './components/Form/Form';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <ProjectList/>
         <Form/>
       </main>
+      <Footer/>
     </div>
     
   );

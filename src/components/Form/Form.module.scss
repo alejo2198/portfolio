@@ -3,6 +3,7 @@
 
 .form-section{
     padding: $small-spacing;
+    padding-bottom: 3rem;
     position: relative;
     @include tablet{
         padding: $medium-spacing;

@@ -1,0 +1,61 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.footer{
+    background-color: $secondary-color;
+    color: white;
+    padding: $medium-spacing $small-spacing;
+   
+
+    &__title{
+        @include styleText($m-footer-heading-fs,700);
+        margin-bottom: $extra-small-spacing;
+    }
+    &__text{
+        @include styleText($m-body-fs,400);
+        line-height: $m-body-lh;
+    }
+    &__links-container{
+        margin: $large-spacing auto;
+        list-style: none;
+    }
+    &__link-container{
+        margin-bottom: .75rem;
+    }
+    &__link{
+        text-decoration: none;
+        color:white;
+        margin-bottom: $small-spacing;
+        @include styleText($m-footer-link-fs,400);
+
+        &:hover{
+            padding-bottom: .2rem;
+            border-bottom: 2px white solid;;
+        }
+    }
+    &__icon-list{
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        gap:$small-spacing;
+    }
+    &__icon-container{
+        padding: .75rem;
+        border-radius: 50%;
+        border: 2px white solid;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+
+        &:hover{
+            background: linear-gradient(to right, $primary-color, purple);
+        }
+
+    }
+    &__icon{
+        width:1.5rem;
+        height:1.5rem;
+
+    }
+}
