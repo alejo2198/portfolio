@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { register } from 'swiper/element/bundle';
 import Slide from '../Slide/Slide';
-
+import classes from './Slider.module.scss'
 import navigationRight from '../../assets/icons/navigation-right.svg'
 import navigationLeft from '../../assets/icons/navigation-left.svg'
 
@@ -81,7 +81,8 @@ const Slider = () => {
     }, []);
 
     return (
-        <swiper-container
+        <div className={classes['slider-wrapper']}>
+             <swiper-container
             ref={swiperRef}
             slides-per-view="1"
             centeredSlides={true}
@@ -91,7 +92,9 @@ const Slider = () => {
                 return <swiper-slide key={index} ><Slide slide={slide}/></swiper-slide>
             })}
             
-        </swiper-container>
+            </swiper-container>
+        </div>
+       
     );
 };
 

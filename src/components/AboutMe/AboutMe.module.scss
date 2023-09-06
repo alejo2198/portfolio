@@ -20,5 +20,6 @@
         @include styleText($m-body-fs,400);
         line-height: $m-body-lh;
         margin:$small-spacing 0;
+        max-width: min(34rem,100%);
     }
 }
