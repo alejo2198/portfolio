@@ -2,6 +2,7 @@
 @use '../../styles/partials/mixins' as *;
 .project-section{
     padding: $small-spacing;
+    padding-bottom: 0;
     @include tablet{
         padding: $medium-spacing;
     }
