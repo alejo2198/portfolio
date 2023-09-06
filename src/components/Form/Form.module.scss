@@ -51,7 +51,7 @@
         resize: none;
     }
     &__img{
-        height:12rem;
+        height:clamp(12rem,50vw,22rem);
         position:absolute;
         z-index: -2;
         right:0;
@@ -69,6 +69,7 @@
         line-height: $m-body-lh;
         margin:$small-spacing 0;
         margin-bottom: 8rem;
+        max-width: min(34rem,100%);
     }
     &__button{
         align-self: flex-end;
