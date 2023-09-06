@@ -9,9 +9,7 @@
     overflow: hidden;
     color:white;
 
-    @include tablet{
-        padding: $medium-spacing;
-    }
+    
     @include desktop{
         padding: $large-spacing;
     }
@@ -22,6 +20,9 @@
         padding: $small-spacing;
         display:flex;
         flex-direction: column;
+        @include tablet{
+            padding: $large-spacing;
+        }
     }
 
     &__button-container{
@@ -41,7 +42,9 @@
         background-image: url('../../assets/design/rectangle.svg');
         background-repeat: no-repeat;
         background-size: cover;
-       
+        @include tablet{
+            background-image: url('../../assets/design/rectangle-tablet.svg');
+        }
     }
 
     //HEADER ELEMENTS

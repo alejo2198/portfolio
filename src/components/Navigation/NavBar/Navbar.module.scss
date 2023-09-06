@@ -3,22 +3,45 @@
 
 .nav{
     position: relative;
-    &__links{
-        display:none;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 $small-spacing;
+    @include tablet{
+        padding:0 $medium-spacing
     }
+    &__links{
+       display:flex;
+       gap:$extra-large-spacing;
+       list-style: none;
+    }
+
+    &__link{
+        color:white;
+        text-decoration: none;
+        @include tablet{
+            @include styleText($t-nav-link-fs,400)
+        }
+     }
 }
 .logo{
     display: flex;
     align-items: center;
-    padding: $small-spacing;
+    padding: $small-spacing 0;
 
     &__icon{
         height:2.2rem;
         margin-right: $small-spacing;
+        @include tablet{
+            height: 3rem;
+        }
     }
 
     &__text{
         font-size: $m-logo-fs;
+        @include tablet{
+            font-size: $t-logo-fs;
+        }
     }
     
 }

@@ -38,11 +38,14 @@ const NavBar = () => {
                 <p className={classes['logo__text']}>Junior Developer</p>
             </div> 
             {isMobile && <HamburgerMenu/>}
-            <ul className={classes['nav__links']}>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Projects</a></li>
-                <li><a href="/">Contact Me</a></li>
-            </ul>
+            {!isMobile && 
+                <ul className={classes['nav__links']}>
+                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="/">About</a></li>
+                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="/">Projects</a></li>
+                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="/">Contact Me</a></li>
+                </ul>
+            }
+            
         </nav>
     );
 };
