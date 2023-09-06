@@ -41,8 +41,8 @@
     &--resume{
         @extend .button--projects;
         padding: $extra-small-spacing 1.2rem;
-        margin-right: $medium-spacing;
-        margin-bottom: $medium-spacing;
+        margin-right: clamp($medium-spacing,10vw,5rem);
+        margin-bottom: 1.5rem;
        
     }
 }

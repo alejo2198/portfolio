@@ -7,7 +7,6 @@
     min-height: 32.5rem;
     background-image: linear-gradient(to bottom right,$gradient-color,$primary-color,$gradient-color);
     overflow: hidden;
-    
     color:white;
 
     @include tablet{
@@ -58,7 +57,7 @@
     }
 
     &__profile-picture{
-        height:18rem;
+        height:clamp(18rem,75vw,23rem);
         position: absolute;
         right:-3rem;
         bottom: 3.5rem;
