@@ -14,6 +14,9 @@
         color:$primary-color;
         @include styleText($m-section-heading-fs,700);
         margin:$small-spacing 0;
+        @include tablet{
+            @include styleText($t-section-heading-fs,700);
+        }
     }
     &__text{
         color:$primary-text-color;
@@ -21,5 +24,33 @@
         line-height: $m-body-lh;
         margin:$small-spacing 0;
         max-width: min(34rem,100%);
+        @include tablet{
+            @include styleText($t-body-fs,400);
+            line-height: $t-body-lh;
+            max-width: 100%;
+        }
+
+        &--full-width{
+            @extend .about-section__text;
+            width: 100%;
+        }
     }
+}
+
+.layout-container-text{
+    @include tablet{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 50%;
+    }
+   
+}
+.layout-container{
+    @include tablet{
+        display:flex;
+    }   
+   
+    
 }

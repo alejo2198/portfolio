@@ -3,4 +3,8 @@
 .slider-wrapper{
     max-width: 27rem;
     margin: 0 auto;
+    align-self: center;
+    @include tablet{
+        padding-left: $medium-spacing;
+    }
 }

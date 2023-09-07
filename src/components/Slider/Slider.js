@@ -41,12 +41,9 @@ const Slider = () => {
             loop:true,
             injectStyles: [
                 `
-               
                 .swiper-button-next,
                 .swiper-button-prev {
-                    
                     height:1.5rem;
-                    
                 }
 
                 .swiper-button-prev {
