@@ -8,7 +8,7 @@
     align-items: center;
     padding:0 $small-spacing;
     @include tablet{
-        padding:0 $medium-spacing
+        padding:0 $large-spacing
     }
     &__links{
        display:flex;
