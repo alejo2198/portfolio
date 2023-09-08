@@ -23,7 +23,7 @@ const ProjectList = () => {
     return (
         <section className={classes["project-section"]}>
             <h2 className={classes["project-section__title"]}>Projects</h2>
-            <ul>
+            <ul className={classes["projects"]}>
                 {projects.map((project,index)=>{
                     return <Project key={index} index={index} project={project} />
                 })}
