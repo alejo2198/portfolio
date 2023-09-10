@@ -26,9 +26,21 @@
     box-shadow: 1rem 1rem $primary-color,0px 3px 5px rgba(0,0,0,0.2);
     background-color: white;
 
+    @include tablet{
+        padding: 2rem 1.75rem ;
+        width:23.5rem;
+        margin: 0;
+        margin-left: 10%;
+        margin-bottom:2rem;
+    }
+
     &__label{
         @include styleText($m-body-fs,400);
         margin-bottom: .2rem;
+        @include tablet{
+            @include styleText($t-body-fs,400);
+            margin-bottom: .5rem;
+        }
     }
 
     &__input{
@@ -43,33 +55,56 @@
             @extend .form__input;
             background-image: linear-gradient(to bottom, $error-gradient-dark,$error-gradient-light);
         }
+
+        @include tablet{
+            height: 2.75rem
+        }
     }
 
     &__textarea{
         @extend .form__input;
         height:6rem;
         resize: none;
+        @include tablet{
+            height: 7.5rem;
+            margin-bottom:2.5rem;
+        }
     }
     &__img{
         height:clamp(12rem,50vw,22rem);
         position:absolute;
         z-index: -2;
         right:0;
-        top:11rem;
+        top:10rem;
+        @include tablet{
+            display: block;
+            height: 35rem;
+            top:15rem;
+            right:5%;
+        }
     }
 
     &__title{
         color:$primary-color;
         @include styleText($m-section-heading-fs,700);
         margin-bottom:$small-spacing;
+        @include tablet{
+            @include styleText($t-section-heading-fs,700);
+        }
     }
     &__text{
         color:$primary-text-color;
         @include styleText($m-label-fs,400);
         line-height: $m-body-lh;
         margin:$small-spacing 0;
-        margin-bottom: 8rem;
+        margin-bottom: 7rem;
         max-width: min(34rem,100%);
+        @include tablet{
+            @include styleText($t-label-fs,400);
+            line-height: $t-body-lh;
+            margin-bottom: 2rem;
+            max-width: 75%;
+        }
     }
     &__button{
         align-self: flex-end;
@@ -80,7 +115,11 @@
         box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
         border-radius: .625rem;
         border: 3px solid $input-gradient-dark;
-       
+        @include tablet{
+            @include styleText(1.375rem,400);
+            padding: .75rem 3rem;
+            
+        }
     }
 
 
