@@ -17,22 +17,35 @@
     width:14.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-image: linear-gradient(to bottom right,$secondary-color,$primary-color);
     border-radius: 1.25rem;
+    @include tablet{
+        width: 35rem;
+    }
 
     &__close-icon{
         align-self: flex-end;
+        @include tablet{
+            height: 2rem;
+        }
     }
 
     &__checkmark-icon{
         height: 8rem;
+        @include tablet{
+            height: 12.5rem;
+        }
     }
 
     &__title{
         @include styleText($m-section-heading-fs,700);
         color:white;
         margin:$small-spacing auto;
+        @include tablet{
+            @include styleText($t-section-heading-fs,700);
+            margin:0
+           
+        }
     }
 
     &__text{
@@ -42,5 +55,34 @@
         text-align: center;
         width: 85%;
         margin-bottom: $medium-spacing;
+        @include tablet{
+            @include styleText($t-body-fs,400);
+            line-height: $t-body-lh;
+            margin-bottom: 0;
+            text-align: start;
+            
+        }
+    }
+}
+.layout-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include tablet{
+        flex-direction: row-reverse;
+        margin-top: 2rem;
+        margin:2rem 2rem 0 ;
+    }
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include tablet{
+        gap:$small-spacing;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 }

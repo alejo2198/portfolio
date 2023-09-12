@@ -10,9 +10,13 @@ const Modal = ({closeModal}) => {
         <div className={classes.overlay} onClick={closeModal}>
 <           div className={classes.modal} onClick={e => e.stopPropagation()}>
                 <img className={classes['modal__close-icon']} src={closeIcon} alt="a rounded x" onClick={closeModal}/>
-                <img className={classes['modal__checkmark-icon']} src={checkmarkIcon} alt="a checkmark" />
-                <h2 className={classes['modal__title']}>Success</h2>
-                <p className={classes['modal__text']}>Thank you! Your message has been received. I will contact you in 1-2 business days. </p>
+                <div className={classes['layout-container']}>
+                    <img className={classes['modal__checkmark-icon']} src={checkmarkIcon} alt="a checkmark" />
+                    <div className={classes['text-container']}>
+                        <h2 className={classes['modal__title']}>Success</h2>
+                        <p className={classes['modal__text']}>Thank you! Your message has been received. I will contact you in 1-2 business days. </p>
+                    </div>
+                </div>
             </div>
         </div>
         
