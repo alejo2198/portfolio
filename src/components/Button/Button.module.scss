@@ -12,6 +12,9 @@
     @include tablet{
         padding: $extra-small-spacing 2.25rem;
     }
+    @include desktop{
+        padding: $extra-small-spacing 2.5rem;
+    }
 
     &:hover {
         border-color: white;
@@ -24,6 +27,10 @@
         @include tablet{
             height:1.5rem;
         }
+        @include desktop{
+            height:1.75rem;
+            margin-left: $small-spacing;
+        }
     }
     
     &--contact{
@@ -35,6 +42,9 @@
 
         @include tablet{
             @include styleText($t-button-fs,700);
+        }
+        @include desktop{
+            @include styleText($d-button-fs,700);
         }
          
     }
@@ -51,6 +61,11 @@
             padding:$extra-small-spacing $small-spacing;
             margin-left:$medium-spacing
         }
+        @include desktop{
+            @include styleText($d-button-fs,700);
+            padding:$extra-small-spacing $medium-spacing;
+            margin-left:5rem;
+        }
 
     }
 
@@ -62,5 +77,9 @@
         @include tablet{
            margin-right: 3rem;
         }
+        @include desktop{
+            margin-bottom: 1.8rem;
+            padding: $extra-small-spacing 2rem;
+         }
     }
 }

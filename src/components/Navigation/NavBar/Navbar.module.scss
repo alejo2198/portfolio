@@ -8,12 +8,18 @@
     align-items: center;
     padding:0 $small-spacing;
     @include tablet{
-        padding:0 $large-spacing
+        padding:0 $large-spacing;
+    }
+    @include desktop{
+        padding:0 $extra-large-spacing;
     }
     &__links{
        display:flex;
        gap:$extra-large-spacing;
        list-style: none;
+       @include desktop{
+        gap:3rem;
+    }
     }
 
     &__link{
@@ -22,6 +28,12 @@
         @include tablet{
             @include styleText($t-nav-link-fs,400)
         }
+        @include desktop{
+            @include styleText($d-nav-link-fs,400)
+        }
+     }
+     &__link:hover {
+        border-bottom: 2px white solid;
      }
 }
 .logo{
@@ -35,12 +47,19 @@
         @include tablet{
             height: 3rem;
         }
+        @include desktop{
+            height: 3.5rem;
+            margin-right: $medium-spacing;
+        }
     }
 
     &__text{
         font-size: $m-logo-fs;
         @include tablet{
             font-size: $t-logo-fs;
+        }
+        @include desktop{
+            font-size: $d-logo-fs;
         }
     }
     

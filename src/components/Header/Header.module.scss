@@ -8,11 +8,7 @@
     background-image: linear-gradient(to bottom right,$gradient-color,$primary-color,$gradient-color);
     overflow: hidden;
     color:white;
-
     
-    @include desktop{
-        padding: $large-spacing;
-    }
 
     //CONTAINERS
 
@@ -22,6 +18,10 @@
         flex-direction: column;
         @include tablet{
             padding: $large-spacing;
+        }
+        @include desktop{
+            max-width: $desktop-max-width;
+            margin: 0 auto;
         }
     }
 
@@ -33,6 +33,9 @@
         gap:$small-spacing;
         @include tablet{
             gap:$medium-spacing;
+        }
+        @include tablet{
+            gap:$large-spacing;
         }
     }
     &__resume-container{
@@ -48,6 +51,10 @@
         @include tablet{
             background-image: url('../../assets/design/rectangle-tablet.svg');
         }
+        @include desktop{
+            height: 12rem;
+            background-image: url('../../assets/design/rectangle-desktop.svg');
+        }
     }
 
     //HEADER ELEMENTS
@@ -56,6 +63,9 @@
         @include styleText($m-hero-subheading-fs,400);
         @include tablet{
             @include styleText($t-hero-subheading-fs,400);
+        }
+        @include desktop{
+            @include styleText($d-hero-subheading-fs,400);
         }
     
         &--name{
@@ -66,6 +76,9 @@
             @include tablet{
                 @include styleText($t-hero-main-heading-fs,700);
                 margin:$small-spacing auto;
+            }
+            @include desktop{
+                @include styleText($d-hero-main-heading-fs,700);
             }
         }
     }
@@ -79,6 +92,12 @@
         @include tablet{
             height:clamp(28rem,50vw,32rem);
             right:max(2rem,6vw)
+        }
+        @include desktop{
+            height:40rem;
+            
+            //height:clamp(28rem,50vw,32rem);
+            right:max(2rem,10vw)
         }
        
     }
