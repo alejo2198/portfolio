@@ -5,19 +5,38 @@
     background-color: $secondary-color;
     color: white;
     padding: $medium-spacing $small-spacing;
+    @include tablet{
+        padding: $large-spacing $medium-spacing;
+    }
    
 
     &__title{
         @include styleText($m-footer-heading-fs,700);
         margin-bottom: $extra-small-spacing;
+        @include tablet{
+            @include styleText($t-footer-heading-fs,700);
+        }
     }
     &__text{
         @include styleText($m-body-fs,400);
         line-height: $m-body-lh;
+        @include tablet{
+            @include styleText($t-body-fs,400);
+            line-height: $t-body-lh;
+            width: 80%;
+        }
     }
     &__links-container{
         margin: $large-spacing auto;
         list-style: none;
+        @include tablet{
+            margin: 0;
+            margin-top: .5rem;
+            display: flex;
+            gap:1.5rem;
+            justify-content: space-between;
+
+        }
     }
     &__link-container{
         margin-bottom: .75rem;
@@ -27,6 +46,9 @@
         color:white;
         margin-bottom: $small-spacing;
         @include styleText($m-footer-link-fs,400);
+        @include tablet{
+            @include styleText($t-footer-link-fs,400);
+        }
 
         &:hover{
             padding-bottom: .2rem;
@@ -56,6 +78,24 @@
     &__icon{
         width:1.5rem;
         height:1.5rem;
+        @include tablet{
+            width:1.75rem;
+            height:1.75rem;
+        }
 
     }
+}
+
+.layout-container-text{
+    @include tablet{
+        width: 50%;
+    }
+}
+
+.layout-container{
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+    }
+    
 }
