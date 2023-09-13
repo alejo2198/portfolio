@@ -22,11 +22,18 @@
     @include tablet{
         width: 35rem;
     }
+    @include desktop{
+        width: 47rem;
+        height: 30rem;
+    }
 
     &__close-icon{
         align-self: flex-end;
         @include tablet{
             height: 2rem;
+        }
+        @include desktop{
+            height: 2.5rem;
         }
     }
 
@@ -34,6 +41,9 @@
         height: 8rem;
         @include tablet{
             height: 12.5rem;
+        }
+        @include desktop{
+            height: 19rem;
         }
     }
 
@@ -44,7 +54,10 @@
         @include tablet{
             @include styleText($t-section-heading-fs,700);
             margin:0
-           
+        }
+        @include desktop{
+            @include styleText($d-section-heading-fs,700);
+            
         }
     }
 
@@ -60,6 +73,12 @@
             line-height: $t-body-lh;
             margin-bottom: 0;
             text-align: start;
+        }
+        @include desktop{
+            @include styleText($d-body-fs,400);
+            line-height: 3rem;
+            letter-spacing: .08rem;
+            width: 100%;
             
         }
     }
@@ -73,6 +92,10 @@
         flex-direction: row-reverse;
         margin-top: 2rem;
         margin:2rem 2rem 0 ;
+    }
+    @include desktop{
+        flex-direction: row-reverse;
+        margin:2rem;
     }
 }
 .text-container{
