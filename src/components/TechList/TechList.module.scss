@@ -6,11 +6,17 @@
     align-items: center;
     list-style-type:none;
     animation: 20s slide infinite linear;
+    @include desktop{
+        gap:$small-spacing;
+    }
 
     &__section{
         background-color: $secondary-color;
         overflow: hidden;
         display: flex;
+        @include desktop{
+            padding: $small-spacing 0;
+        }
     }
 }
 

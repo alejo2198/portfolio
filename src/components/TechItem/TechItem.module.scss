@@ -14,6 +14,10 @@
             width:3.5rem;
             height:3.5rem;
         }
+        @include desktop{
+            width:5rem;
+            height:5rem;
+        }
     }
 
 
@@ -21,6 +25,9 @@
         @include styleText($m-body-fs,400);
         @include tablet{
             @include styleText($t-body-fs,400);
+        }
+        @include desktop{
+            @include styleText($d-body-fs,400);
         }
     }
    
