@@ -7,4 +7,10 @@
     @include tablet{
         padding-left: $medium-spacing;
     }
+    @include desktop{
+        max-width: 32rem;
+        padding-left: 3rem;
+        position: relative;
+        top:-5rem;
+    }
 }

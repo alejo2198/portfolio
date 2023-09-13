@@ -12,6 +12,10 @@
         background-size: 13rem;
         gap:$small-spacing;
     }
+    @include desktop{
+        background-size: 17rem;
+        gap:$medium-spacing;
+    }
     
     &__title{
         position: relative;
@@ -24,6 +28,11 @@
         @include tablet{
             @include styleText($t-section-subheading-fs,700);
         }
+        @include desktop{
+            @include styleText($d-section-subheading-fs,700);
+            top:1.2rem;
+            left:4.2rem;
+        }
     }
     &__graphic{
         height:9rem;
@@ -32,6 +41,9 @@
         margin-bottom: $small-spacing;
         @include tablet{
             height:11rem;
+        }
+        @include desktop{
+            height:14rem;
         }
     }
     &__text{
@@ -46,6 +58,11 @@
             @include styleText($t-carousel-fs,400);
             line-height:$t-carousel-lh;
             margin-bottom: $medium-spacing;
+        }
+        @include desktop{
+            @include styleText($d-carousel-fs,400);
+            line-height:$d-carousel-lh;
+            
         }
     }
 }
