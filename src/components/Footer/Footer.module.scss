@@ -8,6 +8,9 @@
     @include tablet{
         padding: $large-spacing $medium-spacing;
     }
+    @include desktop{
+        padding: $extra-large-spacing;
+    }
    
 
     &__title{
@@ -15,6 +18,10 @@
         margin-bottom: $extra-small-spacing;
         @include tablet{
             @include styleText($t-footer-heading-fs,700);
+        }
+        @include desktop{
+            @include styleText($d-footer-heading-fs,700);
+            margin-bottom: $small-spacing;
         }
     }
     &__text{
@@ -24,6 +31,11 @@
             @include styleText($t-body-fs,400);
             line-height: $t-body-lh;
             width: 80%;
+        }
+        @include desktop{
+            @include styleText($d-body-fs,400);
+            line-height: $d-body-lh;
+            width: 60%;
         }
     }
     &__links-container{
@@ -35,7 +47,6 @@
             display: flex;
             gap:1.5rem;
             justify-content: space-between;
-
         }
     }
     &__link-container{
@@ -48,6 +59,9 @@
         @include styleText($m-footer-link-fs,400);
         @include tablet{
             @include styleText($t-footer-link-fs,400);
+        }
+        @include desktop{
+            @include styleText($d-footer-link-fs,400);
         }
 
         &:hover{
@@ -69,7 +83,9 @@
         display:flex;
         justify-content:center;
         align-items: center;
-
+        @include desktop{
+            padding:1rem;
+        }
         &:hover{
             background: linear-gradient(to right, $primary-color, purple);
         }
@@ -81,6 +97,10 @@
         @include tablet{
             width:1.75rem;
             height:1.75rem;
+        }
+        @include desktop{
+            width:2rem;
+            height:2rem;
         }
 
     }
