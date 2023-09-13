@@ -10,6 +10,12 @@
         max-width:57rem;
         margin: 0 auto;
     }
+    @include desktop{
+        max-width:100%;
+        margin: 0;
+        justify-content: space-between;
+        gap:unset;
+    }
     &--reverse{
         @extend .project;
         @include tablet{
@@ -20,6 +26,9 @@
     &__content{
         @include tablet{
             width:60%;
+        }
+        @include desktop{
+            width:50%;
         }
         
     }
@@ -36,12 +45,18 @@
         @include tablet{
             @include styleText($t-section-subheading-fs,700);
         }
+        @include desktop{
+            @include styleText($d-section-subheading-fs,700);
+        }
     }
     &__in-development{
         @include styleText($m-in-development-fs,700);
         color:$secondary-text-color;
         @include tablet{
             @include styleText($t-in-development-fs,700);
+        }
+        @include desktop{
+            @include styleText($d-in-development-fs,700);
         }
     }
     &__description{
@@ -55,6 +70,10 @@
             line-height: $t-body-lh;
             max-width: 100%;
         }
+        @include desktop{
+            @include styleText($d-body-fs,400);
+            line-height: $d-body-lh;
+        }
     }
     &__image-container{
         width:16rem;
@@ -63,9 +82,13 @@
         margin: $medium-spacing auto;
         @include tablet{
             height:23rem;
-            // width:14rem;
-            // justify-self: center;
             margin:0;
+        }
+        @include desktop{
+            height:25rem;
+            width:30rem;
+            align-self:center;
+           
         }
         
     }
@@ -96,8 +119,10 @@
         margin-bottom: .5rem;
         @include styleText($m-body-fs,400);
         @include tablet{
-            @include styleText($t-body-fs,400);
-            
+            @include styleText($t-body-fs,400); 
+        }
+        @include desktop{
+            @include styleText($d-body-fs,400); 
         }
         
     }
