@@ -11,6 +11,7 @@
     @include desktop{
         padding: $large-spacing;
         max-width: $desktop-max-width;
+        margin:0 auto;
     }
 }
 
@@ -33,6 +34,10 @@
         margin-left: 10%;
         margin-bottom:2rem;
     }
+    @include desktop{
+        width:27rem;
+        margin-left: 0;
+    }
 
     &__label{
         @include styleText($m-body-fs,400);
@@ -40,6 +45,10 @@
         @include tablet{
             @include styleText($t-body-fs,400);
             margin-bottom: .5rem;
+        }
+        @include desktop{
+            @include styleText($d-body-fs,400);
+            margin-bottom: .75rem;
         }
     }
 
@@ -57,7 +66,10 @@
         }
 
         @include tablet{
-            height: 2.75rem
+            height: 2.75rem;
+        }
+        @include desktop{
+            height: 3rem;
         }
     }
 
@@ -69,6 +81,7 @@
             height: 7.5rem;
             margin-bottom:2.5rem;
         }
+       
     }
     &__img{
         height:clamp(12rem,50vw,22rem);
@@ -82,6 +95,13 @@
             top:15rem;
             right:5%;
         }
+
+        @include desktop{
+            display: block;
+            height: 35rem;
+            top:19rem;
+            right:5%;
+        }
     }
 
     &__title{
@@ -90,6 +110,9 @@
         margin-bottom:$small-spacing;
         @include tablet{
             @include styleText($t-section-heading-fs,700);
+        }
+        @include desktop{
+            @include styleText($d-section-heading-fs,700);
         }
     }
     &__text{
@@ -104,6 +127,11 @@
             line-height: $t-body-lh;
             margin-bottom: 2rem;
             max-width: 75%;
+        }
+        @include desktop{
+            @include styleText($d-label-fs,400);
+            line-height: $d-body-lh;
+            max-width: 60%;
         }
     }
     &__button{
