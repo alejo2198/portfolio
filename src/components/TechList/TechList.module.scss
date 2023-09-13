@@ -8,6 +8,7 @@
     animation: 20s slide infinite linear;
     @include desktop{
         gap:$small-spacing;
+        animation: 30s slide infinite linear;
     }
 
     &__section{
