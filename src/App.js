@@ -5,10 +5,12 @@ import TechList from './components/TechList/TechList';
 import ProjectList from './components/ProjectList/ProjectList';
 import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
+import { MobileContextProvider } from './store/mobile-context';
 
 function App() {
   return (
-    <div className="app">
+    <MobileContextProvider>
+      <div className="app">
       <Header/>
       <main className="main">
         <AboutMe/>
@@ -17,8 +19,8 @@ function App() {
         <Form/>
       </main>
       <Footer/>
-    </div>
-    
+      </div>
+    </MobileContextProvider>
   );
 }
 

@@ -1,35 +1,12 @@
 import classes from './Navbar.module.scss'
 import logo from '../../../assets/icons/logo.svg'
-
-import { useEffect, useState } from 'react';
+import MobileContext from '../../../store/mobile-context';
+import { useContext } from 'react';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu'
 
-function getWindowWidth() {
-    const { innerWidth: width} = window;
-    return width;
-}
-
 const NavBar = () => {
-    const [isMobile,setIsMobile] = useState(getWindowWidth() < 767);
-    const [windowWidth, setWindowWidth] = useState(getWindowWidth());
-    
-    useEffect(() => {
-        function handleResize() {
-          setWindowWidth(getWindowWidth());
-        }
-    
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    useEffect(()=>{
-        if(windowWidth < 767){
-            setIsMobile(true);
-        } else{
-            setIsMobile(false)
-        }
-
-    },[windowWidth])
+    const mobileContext = useContext(MobileContext);
+    const isMobile = mobileContext.isMobile;
 
     return (
         <nav className={classes.nav}>

@@ -1,33 +1,12 @@
 import ProjectTechItem from '../ProjectTechItem/ProjectTechItem';
 import classes from './Project.module.scss'
-import { useState,useEffect } from 'react';
-
-function getWindowWidth() {
-    const { innerWidth: width} = window;
-    return width;
-}
+import { useContext } from 'react';
+import  MobileContext  from '../../store/mobile-context';
 
 const Project = ({index,project}) => {
-    const [isMobile,setIsMobile] = useState(getWindowWidth() < 767);
-    const [windowWidth, setWindowWidth] = useState(getWindowWidth());
     
-    useEffect(() => {
-        function handleResize() {
-          setWindowWidth(getWindowWidth());
-        }
-    
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    useEffect(()=>{
-        if(windowWidth < 767){
-            setIsMobile(true);
-        } else{
-            setIsMobile(false)
-        }
-
-    },[windowWidth])
+    const mobileContext = useContext(MobileContext);
+    const isMobile = mobileContext.isMobile;
     const isReverse = (index % 2 === 1)
 
     return (
