@@ -13,6 +13,28 @@ body{
     color:$primary-text-color;
 }
 
-.main{
-  
+p{
+    color:$primary-text-color;
+    @include styleText($m-body-fs,400);
+    line-height: $m-body-lh;
+    @include tablet{
+        @include styleText($t-body-fs,400);
+        line-height: $t-body-lh;
+    }
+    @include desktop{
+        @include styleText($d-body-fs,400);
+        line-height: $d-body-lh;
+    }
+}
+
+h2{
+    color:$primary-color;
+    @include styleText($m-section-heading-fs,700);
+    margin:$small-spacing 0;
+    @include tablet{
+        @include styleText($t-section-heading-fs,700);
+    }
+    @include desktop{
+        @include styleText($d-section-heading-fs,700);
+    }
 }

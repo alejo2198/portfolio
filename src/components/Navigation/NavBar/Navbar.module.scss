@@ -55,6 +55,7 @@
 
     &__text{
         font-size: $m-logo-fs;
+        color:white;
         @include tablet{
             font-size: $t-logo-fs;
         }

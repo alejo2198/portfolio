@@ -22,13 +22,7 @@
 
 
     &__text{
-        @include styleText($m-body-fs,400);
-        @include tablet{
-            @include styleText($t-body-fs,400);
-        }
-        @include desktop{
-            @include styleText($d-body-fs,400);
-        }
+        color:white;
     }
    
 }

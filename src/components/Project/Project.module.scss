@@ -60,19 +60,10 @@
         }
     }
     &__description{
-        @include styleText($m-body-fs,400);
-        color:$primary-text-color;
-        line-height: $m-body-lh;
         margin-bottom: $small-spacing;
         max-width: min(34rem,100%);
         @include tablet{
-            @include styleText($t-body-fs,400);
-            line-height: $t-body-lh;
             max-width: 100%;
-        }
-        @include desktop{
-            @include styleText($d-body-fs,400);
-            line-height: $d-body-lh;
         }
     }
     &__image-container{
@@ -124,9 +115,6 @@
         @include desktop{
             @include styleText($d-body-fs,400); 
         }
-        
-    }
-    &__tech-stack{
         
     }
     &__tech-stack-container{

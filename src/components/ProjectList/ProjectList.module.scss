@@ -12,15 +12,11 @@
         margin:0 auto;
     }
     &__title{
-        color:$primary-color;
-        @include styleText($m-section-heading-fs,700);
         margin:$small-spacing 0;
         @include tablet{
-            @include styleText($t-section-heading-fs,700);
             margin:$medium-spacing 0;
         }
         @include desktop{
-            @include styleText($d-section-heading-fs,700);
             margin:$medium-spacing 0;
         }
     }

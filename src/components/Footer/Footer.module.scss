@@ -25,16 +25,11 @@
         }
     }
     &__text{
-        @include styleText($m-body-fs,400);
-        line-height: $m-body-lh;
+        color:white;
         @include tablet{
-            @include styleText($t-body-fs,400);
-            line-height: $t-body-lh;
             width: 80%;
         }
         @include desktop{
-            @include styleText($d-body-fs,400);
-            line-height: $d-body-lh;
             width: 60%;
         }
     }

@@ -105,32 +105,17 @@
     }
 
     &__title{
-        color:$primary-color;
-        @include styleText($m-section-heading-fs,700);
         margin-bottom:$small-spacing;
-        @include tablet{
-            @include styleText($t-section-heading-fs,700);
-        }
-        @include desktop{
-            @include styleText($d-section-heading-fs,700);
-        }
     }
     &__text{
-        color:$primary-text-color;
-        @include styleText($m-label-fs,400);
-        line-height: $m-body-lh;
         margin:$small-spacing 0;
         margin-bottom: 7rem;
         max-width: min(34rem,100%);
         @include tablet{
-            @include styleText($t-label-fs,400);
-            line-height: $t-body-lh;
             margin-bottom: 2rem;
             max-width: 75%;
         }
         @include desktop{
-            @include styleText($d-label-fs,400);
-            line-height: $d-body-lh;
             max-width: 60%;
         }
     }
