@@ -81,6 +81,10 @@
             height: 7.5rem;
             margin-bottom:2.5rem;
         }
+        &--error{
+            @extend .form__textarea;
+            background-image: linear-gradient(to bottom, $error-gradient-dark,$error-gradient-light);
+        }
        
     }
     &__img{
