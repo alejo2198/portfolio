@@ -3,7 +3,7 @@ import logo from '../../../assets/icons/logo.svg'
 import MobileContext from '../../../store/mobile-context';
 import { useContext } from 'react';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu'
-import { smoothScrollToSection } from '../../../utils/smooth-scroll';
+
 
 const NavBar = () => {
     const mobileContext = useContext(MobileContext);

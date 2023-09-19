@@ -2,7 +2,8 @@ import classes from './Form.module.scss'
 import FormGraphic from '../../assets/images/form-graphic.svg'
 import SuccessModal from '../SuccessModal/SuccessModal';
 import {isEmpty,isEmail} from 'validator'
-import { useState,useReducer, useEffect } from 'react';
+import { useState,useReducer, useEffect,useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const emailReducer = (state,action) => {
     if (action.type === 'USER_INPUT'){
@@ -121,6 +122,7 @@ const Form = () => {
     const [messageState,dispatchMessage] = useReducer(messageReducer,{value:'',isEmpty:true});
 
     const [formState,dispatchForm] = useReducer(formReducer,{isValid:false,isTouched:false});
+    const form = useRef();
 
 
     const {isValid: emailIsValid} = emailState;
@@ -148,8 +150,15 @@ const Form = () => {
             dispatchMessage("VALID_FORM_SUBMISSION");
             dispatchName("VALID_FORM_SUBMISSION");
             dispatchEmail("VALID_FORM_SUBMISSION");
+            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
             setIsModalOpen(true)
             event.target.reset();
+
         }
         
     }
@@ -174,20 +183,19 @@ const Form = () => {
         event.preventDefault();
         dispatchMessage({type:'USER_INPUT',val:event.target.value})
     }
-    console.log(formIsTouched)
     return (
         <section className={classes["form-section"]} id="contact">
             {isModalOpen && <SuccessModal closeModal={closeModal}/>}
             <h2 className={classes["form__title"]}>Contact Me</h2>
             <p className={classes["form__text"]}>If you feel like I would be a good addition to your team, please don’t hesitate to reach out. I would love to hear from you.</p>
             <img className={classes["form__img"]} src={FormGraphic} alt="" />
-            <form className={classes["form"]} onSubmit={openModal}>
-                <label className={classes["form__label"]} htmlFor="full-name">Full Name:</label>
-                <input className={classes[`form__input${nameIsInvalid && formIsTouched ? '--error':''}`]} type="text" name="full-name" onInput={nameChangeHamdler}/>
-                <label className={classes["form__label"]} htmlFor="company">Company:</label>
-                <input  className={classes[`form__input${companyIsInvalid && formIsTouched ? '--error':''}`]} type="text" name="company" onInput={companyChangeHamdler} />
-                <label className={classes["form__label"]} htmlFor="email">Email:</label>
-                <input  className={classes[`form__input${!emailIsValid && formIsTouched ? '--error':''}`]} type="email" name="email" onInput={emailChangeHamdler} />
+            <form className={classes["form"]} onSubmit={openModal} ref={form}>
+                <label className={classes["form__label"]} htmlFor="user_name">Full Name:</label>
+                <input className={classes[`form__input${nameIsInvalid && formIsTouched ? '--error':''}`]} type="text" name="user_name" onInput={nameChangeHamdler}/>
+                <label className={classes["form__label"]} htmlFor="user_company">Company:</label>
+                <input  className={classes[`form__input${companyIsInvalid && formIsTouched ? '--error':''}`]} type="text" name="user_company" onInput={companyChangeHamdler} />
+                <label className={classes["form__label"]} htmlFor="user_email">Email:</label>
+                <input  className={classes[`form__input${!emailIsValid && formIsTouched ? '--error':''}`]} type="email" name="user_email" onInput={emailChangeHamdler} />
                 <label className={classes["form__label"]} htmlFor="message">Message:</label>
                 <textarea className={classes[`form__textarea${messageIsInvalid && formIsTouched ? '--error':''}`]} name="message" onInput={messageChangeHamdler} ></textarea>
                 <button className={classes["form__button"]}>SEND</button>
@@ -197,3 +205,4 @@ const Form = () => {
 };
 
 export default Form;
+

@@ -1,6 +1,5 @@
 import classes from './MobileNavBar.module.scss'
 import closeIcon from '../../../assets/icons/close.svg'
-import { smoothScrollToSection } from '../../../utils/smooth-scroll';
 
 const MobileNavBar = ({closeMenuHandler}) => {
     return (
