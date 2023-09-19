@@ -1,14 +1,17 @@
 import classes from './Button.module.scss'
 import downloadIcon from '../../assets/icons/download.svg'
+import { smoothScrollToSection } from '../../utils/smooth-scroll';
 
 const Button = ({type}) => {
 
     //Handlers
     const contactMeClickedHandler = (event) => {
         event.preventDefault();
+        smoothScrollToSection('contact')
     }
     const projectsClickedHandler = (event) => {
         event.preventDefault();
+        smoothScrollToSection('projects')
     }
     const resumeClickedHandler = (event) => {
         event.preventDefault();

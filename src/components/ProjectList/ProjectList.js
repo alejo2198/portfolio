@@ -21,7 +21,7 @@ const ProjectList = () => {
     ]
 
     return (
-        <section className={classes["project-section"]}>
+        <section className={classes["project-section"]} id="projects">
             <h2 className={classes["project-section__title"]}>Projects</h2>
             <ul className={classes["projects"]}>
                 {projects.map((project,index)=>{

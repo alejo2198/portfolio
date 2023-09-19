@@ -3,6 +3,7 @@ import logo from '../../../assets/icons/logo.svg'
 import MobileContext from '../../../store/mobile-context';
 import { useContext } from 'react';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu'
+import { smoothScrollToSection } from '../../../utils/smooth-scroll';
 
 const NavBar = () => {
     const mobileContext = useContext(MobileContext);
@@ -17,9 +18,9 @@ const NavBar = () => {
             {isMobile && <HamburgerMenu/>}
             {!isMobile && 
                 <ul className={classes['nav__links']}>
-                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="/">About</a></li>
-                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="/">Projects</a></li>
-                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="/">Contact Me</a></li>
+                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="#about">About</a></li>
+                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="#projects">Projects</a></li>
+                    <li className={classes['nav__link-container']}><a  className={classes['nav__link']} href="#contact">Contact Me</a></li>
                 </ul>
             }
             

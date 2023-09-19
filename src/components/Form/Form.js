@@ -176,7 +176,7 @@ const Form = () => {
     }
     console.log(formIsTouched)
     return (
-        <section className={classes["form-section"]}>
+        <section className={classes["form-section"]} id="contact">
             {isModalOpen && <SuccessModal closeModal={closeModal}/>}
             <h2 className={classes["form__title"]}>Contact Me</h2>
             <p className={classes["form__text"]}>If you feel like I would be a good addition to your team, please don’t hesitate to reach out. I would love to hear from you.</p>
