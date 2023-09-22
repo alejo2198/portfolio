@@ -124,6 +124,7 @@
         }
     }
     &__button{
+        position: relative;
         align-self: flex-end;
         @include styleText(1rem,400);
         color: white;
@@ -141,6 +142,29 @@
 
 
 }
+.dog-validate{
+    z-index: 1;
+    position: absolute;
+    right:clamp(-.5rem,10%,-1rem);
+    top:clamp(-4rem,-6vw,-2.5rem);
+    height:clamp(2.5rem,6vw,4rem);
+    animation: lift .4s linear ;
+}
 
-
+@keyframes lift {
+    0% {
+        top:0;
+        opacity:0;
+    }
+    65%{
+        opacity: 0;
+    }
+    70%{
+        opacity: .5;
+    }
+    100% {
+        top:clamp(-4rem,-6vw,-2.5rem);
+        opacity: 1;
+    }
+  }
 

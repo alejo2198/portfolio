@@ -21,12 +21,14 @@ const Footer = () => {
             </div>
             
             <ul className={classes['footer__icon-list']}>
-                <li className={classes['footer__icon-container']}><img className={classes['footer__icon']} src={resumeIcon} alt="resume download" /></li>
-                <li className={classes['footer__icon-container']}><img className={classes['footer__icon']} src={indeedIcon} alt="indeed link" /></li>
-                <li className={classes['footer__icon-container']}><img className={classes['footer__icon']} src={emailIcon} alt="email link" /></li>
-                <li className={classes['footer__icon-container']}><img className={classes['footer__icon']} src={githubIcon} alt="github link" /></li>
+                <li className={classes['footer__icon-container']}><a href="https://docs.google.com/document/d/1k4IQN1LOXPvVGYoyf9VfNVUcsgeGms5naMfbv3h5wEA/view?usp=sharing" className={classes['footer__anchor']} target='_blank' rel='noreferrer'><img className={classes['footer__icon']} src={resumeIcon} alt="resume download" /></a></li>
+                <li className={classes['footer__icon-container']}><a href="https://www.linkedin.com/in/alejandro-castro-professional/" className={classes['footer__anchor']} target='_blank' rel='noreferrer'><img className={classes['footer__icon']} src={indeedIcon} alt="indeed link" /></a></li>
+                <li className={classes['footer__icon-container']}><a href="mailto:alejo199821@gmail.com" className={classes['footer__anchor']}><img className={classes['footer__icon']} src={emailIcon} alt="email link" /></a></li>
+                <li className={classes['footer__icon-container']}><a href="https://github.com/alejo2198" className={classes['footer__anchor']} target='_blank' rel='noreferrer'><img className={classes['footer__icon']} src={githubIcon} alt="github link" /></a></li>
             </ul>
+            
         </footer>
+
 
     );
 };

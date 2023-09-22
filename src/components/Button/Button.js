@@ -15,6 +15,7 @@ const Button = ({type}) => {
     }
     const resumeClickedHandler = (event) => {
         event.preventDefault();
+        window.open("https://docs.google.com/document/d/1k4IQN1LOXPvVGYoyf9VfNVUcsgeGms5naMfbv3h5wEA/edit?usp=sharing",'_blank') 
     }
 
     //logic for determining handler and class

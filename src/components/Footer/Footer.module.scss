@@ -86,6 +86,19 @@
         }
 
     }
+
+    &__anchor{
+        width:1.5rem;
+        height:1.5rem;
+        @include tablet{
+            width:1.75rem;
+            height:1.75rem;
+        }
+        @include desktop{
+            width:2rem;
+            height:2rem;
+        }
+    }
     &__icon{
         width:1.5rem;
         height:1.5rem;
@@ -97,7 +110,6 @@
             width:2rem;
             height:2rem;
         }
-
     }
 }
 

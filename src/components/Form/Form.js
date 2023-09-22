@@ -4,6 +4,7 @@ import SuccessModal from '../SuccessModal/SuccessModal';
 import {isEmpty,isEmail} from 'validator'
 import { useState,useReducer, useEffect,useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import dog from '../../assets/design/approved-dog.svg'
 
 const emailReducer = (state,action) => {
     if (action.type === 'USER_INPUT'){
@@ -198,7 +199,8 @@ const Form = () => {
                 <input  className={classes[`form__input${!emailIsValid && formIsTouched ? '--error':''}`]} type="email" name="user_email" onInput={emailChangeHamdler} />
                 <label className={classes["form__label"]} htmlFor="message">Message:</label>
                 <textarea className={classes[`form__textarea${messageIsInvalid && formIsTouched ? '--error':''}`]} name="message" onInput={messageChangeHamdler} ></textarea>
-                <button className={classes["form__button"]}>SEND</button>
+                <button className={classes["form__button"]}>SEND {formState.isValid && <img src={dog} className={classes['dog-validate']} alt="illustration to show form is valid" />}</button>
+            
             </form>
         </section>
     );
