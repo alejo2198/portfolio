@@ -1,5 +1,6 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/animations' as *;
 
 .header{
     position: relative;
@@ -26,6 +27,8 @@
     }
 
     &__button-container{
+        animation: moveInLeft 1s ease-out;
+        backface-visibility: hidden;
         display:flex;
         flex-direction: column;
         align-items: flex-start;
@@ -61,6 +64,8 @@
 
     &__title{
         @include styleText($m-hero-subheading-fs,400);
+        backface-visibility: hidden;
+        animation: moveInLeft 1s ease-out;
         @include tablet{
             @include styleText($t-hero-subheading-fs,400);
         }
@@ -84,6 +89,8 @@
     }
 
     &__profile-picture{
+        animation: moveInBottom 1s ease-out;
+        backface-visibility: hidden;
         height:clamp(18rem,75vw,23rem);
         position: absolute;
         right:-3rem;
