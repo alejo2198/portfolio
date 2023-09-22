@@ -60,6 +60,9 @@
         background-image: linear-gradient(to bottom, $input-gradient-dark,$input-gradient-light);
         border:none;
         margin-bottom: $small-spacing;
+        padding:0 .5rem ;
+        @include styleText($m-body-fs,300);
+        color:$secondary-text-color;
         &--error{
             @extend .form__input;
             background-image: linear-gradient(to bottom, $error-gradient-dark,$error-gradient-light);
@@ -67,9 +70,12 @@
 
         @include tablet{
             height: 2.75rem;
+            @include styleText($t-body-fs,300);
+            padding:0 1rem;
         }
         @include desktop{
             height: 3rem;
+            @include styleText($d-body-fs,300);
         }
     }
 
@@ -77,6 +83,7 @@
         @extend .form__input;
         height:6rem;
         resize: none;
+        padding-top: .5rem;
         @include tablet{
             height: 7.5rem;
             margin-bottom:2.5rem;
