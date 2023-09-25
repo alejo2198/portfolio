@@ -62,7 +62,7 @@
         margin-bottom: $small-spacing;
         padding:0 .5rem ;
         @include styleText($m-body-fs,300);
-        color:$secondary-text-color;
+        color:$primary-text-color;
         &--error{
             @extend .form__input;
             background-image: linear-gradient(to bottom, $error-gradient-dark,$error-gradient-light);
@@ -144,6 +144,11 @@
             @include styleText(1.375rem,400);
             padding: .75rem 3rem;
             
+        }
+        &--error{
+            @extend .form__button;
+            background-image: linear-gradient(to bottom, $error-gradient-dark,$error-gradient-light);
+            border: 3px solid rgba($color: #801f1f, $alpha: .5);
         }
     }
 

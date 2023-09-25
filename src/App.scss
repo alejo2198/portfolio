@@ -41,3 +41,7 @@ h2{
         @include styleText($d-section-heading-fs,700);
     }
 }
+
+button{
+    cursor: pointer;
+}
