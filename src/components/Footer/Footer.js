@@ -14,9 +14,9 @@ const Footer = () => {
                     <p className={classes['footer__text']}>I appreciate the time you took out of your day to check out my site. </p>
                 </div>
                 <ul className={classes['footer__links-container']}>
-                    <li className={classes['footer__link-container']}><a className={classes['footer__link']} href="/about">About</a></li>
-                    <li className={classes['footer__link-container']}><a className={classes['footer__link']} href="/projects">Projects</a></li>
-                    <li className={classes['footer__link-container']}><a className={classes['footer__link']} href="/contact'">Contact Me</a></li >
+                    <li className={classes['footer__link-container']}><a className={classes['footer__link']} href="#about">About</a></li>
+                    <li className={classes['footer__link-container']}><a className={classes['footer__link']} href="#projects">Projects</a></li>
+                    <li className={classes['footer__link-container']}><a className={classes['footer__link']} href="#contact">Contact Me</a></li >
                 </ul>
             </div>
             
